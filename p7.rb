@@ -54,7 +54,33 @@ def find_primes(n)
 end
 
 
+## tests
+
+def test1
+  primes = find_primes(14)
+  primes.length == 6 and primes[5] == 13
+end
+
+def test2
+  primes = find_primes(120)
+  primes[primes.length - 1] == 113
+end
+
+def test_all
+  test1 and test2
+end
+
+
 if __FILE__ == $0
+  # run tests
+  puts "Running tests..."
+  if not test_all
+    puts "Tests failed"
+    Kernel::exit(1)
+  end
+  puts "Tests passed."
+
+  # now try to find the 10001st prime
   puts "Running..."
   primes = find_primes(200000)
   puts "Done"
