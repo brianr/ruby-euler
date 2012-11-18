@@ -1,4 +1,4 @@
 ruby-euler
 ==========
 
-Solutions to Project Euler problems, in Ruby
+Solutions to Project Euler problems, in Ruby.
