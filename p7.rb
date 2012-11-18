@@ -6,12 +6,9 @@ def find_primes(n)
   # http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
   # i don't know how big the 10001st prime is, so gonna have to guess.
 
-  # initialize the sieve
   # 1. "create a list of consecutive integers from 2 to n"
+  # an empty hash will do
   sieve = {}
-  for i in 2..n
-    sieve[i] = false  # true if 'marked'
-  end
 
   # 2. "initially, let p equal 2, the first prime number"
   p = 2
@@ -19,7 +16,8 @@ def find_primes(n)
   while true
     # 3. "starting from p, count up in increments of p and mark each of these numbers 
     # greater than p itself in the list."
-    i = 2 * p
+    # optimization: can start from p*p
+    i = p * p
     while i <= n
       sieve[i] = true
       i += p
