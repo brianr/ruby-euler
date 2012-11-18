@@ -1,10 +1,10 @@
 # project euler #7
 # Find the 10001st prime
 
+# returns all primes <= n
 def find_primes(n)
   # use the Sieve of Eratosthenes method
   # http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
-  # i don't know how big the 10001st prime is, so gonna have to guess.
 
   # 1. "create a list of consecutive integers from 2 to n"
   # an empty hash will do
